@@ -1,5 +1,10 @@
 import tkinter as tk
-import random
+from tkinter import messagebox
+
+# Initialize scores
+player_score = 0
+ai_score = 0
+draws = 0
 
 # Initialize the board
 board = [' ' for _ in range(9)]  # 3x3 grid (flattened to a list of 9 elements)
@@ -67,12 +72,15 @@ def update_game_state():
     winner = check_winner(board)
     if winner == 'X':
         result_label.config(text="You Win!")
+        update_score('player')
         disable_buttons()
     elif winner == 'O':
         result_label.config(text="AI Wins!")
+        update_score('ai')
         disable_buttons()
     elif is_board_full(board):
         result_label.config(text="It's a Draw!")
+        update_score('draw')
         disable_buttons()
 
 # Handle a player's move
@@ -93,13 +101,42 @@ def disable_buttons():
     for btn in buttons:
         btn.config(state='disabled')
 
+# Update the score display
+def update_score(result):
+    global player_score, ai_score, draws
+    if result == 'player':
+        player_score += 1
+    elif result == 'ai':
+        ai_score += 1
+    else:
+        draws += 1
+    score_label.config(text=f"Player: {player_score} | AI: {ai_score} | Draws: {draws}")
+
 # Reset the game
 def reset_game():
-    global board
+    global board, player_score, ai_score, draws
     board = [' ' for _ in range(9)]  # Reset the board
+    player_score = 0  # Reset player score
+    ai_score = 0  # Reset AI score
+    draws = 0  # Reset draws
     for btn in buttons:
         btn.config(text=' ', state='normal')
     result_label.config(text="")
+    score_label.config(text=f"Player: {player_score} | AI: {ai_score} | Draws: {draws}")  # Reset score display
+    enable_buttons()
+
+# Enable all buttons for a new game
+def enable_buttons():
+    for btn in buttons:
+        btn.config(state='normal')
+
+# Ask if the player wants to play again
+def play_again():
+    response = messagebox.askyesno("Play Again?", "Do you want to play again?")
+    if response:
+        reset_game()
+    else:
+        root.quit()
 
 # GUI setup using Tkinter
 root = tk.Tk()
@@ -121,9 +158,18 @@ for i in range(3):
 result_label = tk.Label(root, text="", font=('Arial', 16))
 result_label.grid(row=3, column=0, columnspan=3)
 
+# Score label to show the scores
+score_label = tk.Label(root, text=f"Player: {player_score} | AI: {ai_score} | Draws: {draws}",
+                       font=('Arial', 16))
+score_label.grid(row=4, column=0, columnspan=3)
+
 # Reset button
 reset_button = tk.Button(root, text="Reset Game", font=('Arial', 14), command=reset_game)
-reset_button.grid(row=4, column=0, columnspan=3)
+reset_button.grid(row=5, column=0, columnspan=3)
+
+# Play Again button
+play_again_button = tk.Button(root, text="Play Again", font=('Arial', 14), command=play_again)
+play_again_button.grid(row=6, column=0, columnspan=3)
 
 # Start the GUI loop
 root.mainloop()
