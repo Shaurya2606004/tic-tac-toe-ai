@@ -1,39 +1,26 @@
-# Tic-Tac-Toe with Unbeatable AI
+# Tic-Tac-Toe - Unbeatable AI
 
-A simple yet powerful **Tic-Tac-Toe** game built using **Python** and the **Tkinter** library for the graphical user interface (GUI). This version of the game features an **unbeatable AI** powered by the **Minimax algorithm**, making it impossible for the player to win unless they play perfectly.
+A simple Tic-Tac-Toe game with an unbeatable AI using the **Minimax algorithm**. Play against the AI, which always makes the best possible move, ensuring that the AI cannot lose.
 
 ## Features
-
-- **Unbeatable AI**: The AI uses the **Minimax algorithm** to determine the best move, ensuring it plays optimally.
-- **Graphical User Interface**: A clean and simple 3x3 grid interface created using **Tkinter**.
-- **Game State Management**: The game can detect win conditions, draw conditions, and reset the game after each round.
-- **Human vs. AI**: Players can compete against the AI, which will always make the best possible moves.
-- **Simple Reset**: After a game is completed (win/draw), you can start a new game with a simple click.
-
+- **Unbeatable AI**: The AI is powered by the Minimax algorithm, ensuring the best possible move at all times.
+- **Score Tracking**: The game now tracks the number of wins for both the player and the AI. The score is displayed at the top of the game window. 
+  - **Player's score**: Tracks the number of games the player has won.
+  - **AI's score**: Tracks the number of games the AI has won.
+- **Game Reset**: The "Reset Game" button resets the game board and the score, allowing you to start fresh after each game.
+  
 ## How to Play
+1. The game displays a 3x3 grid of buttons. 
+2. The player starts by clicking on an empty square to place an 'X'.
+3. The AI will automatically make its move by placing an 'O' in the best possible spot.
+4. The game will announce the result as soon as either player wins or the board is full (draw).
+5. The **Reset Game** button can be used to start a new game and reset both the board and the score.
 
-1. Clone the repository to your local machine or download the zip file.
-2. Install Python 3.x if it's not already installed.
-3. Run the Python script `tic_tac_toe.py`.
-4. The game will launch in a new window where you can click on the grid to make your moves.
-5. The AI will make its move after each player turn. The goal is to try and beat the unbeatable AI! (Hint: It’s difficult, but not impossible.)
+## Score Reset
+- The player's and AI's scores are displayed at the top of the window. 
+- When you click the **Reset Game** button, both the game board and the scores are reset to their initial values, giving you a fresh start.
 
-## Requirements
-
-- Python 3.x
-- Tkinter (usually comes pre-installed with Python)
-
-To install Tkinter, if not already installed:
-
+## How to Run
+Clone this repository:
 ```bash
-pip install tk
-```
-## Screenshots
-- ![Screenshot 2024-11-20 104317](https://github.com/user-attachments/assets/33633e75-7556-4f27-9993-487fbad6e6ae)
-- ![Screenshot 2024-11-20 104330](https://github.com/user-attachments/assets/b1e2a7b3-e6a9-47a1-a1e7-701b423a66f2)
-- ![Screenshot 2024-11-20 104338](https://github.com/user-attachments/assets/b1a5fa49-0004-494e-a000-8aa86a78ea6c)
-- ![Screenshot 2024-11-20 104349](https://github.com/user-attachments/assets/0987e144-b402-4ab3-a994-7866ffa80a63)
-
-
-
-
+git clone https://github.com/your-username/tic-tac-toe-ai.git
