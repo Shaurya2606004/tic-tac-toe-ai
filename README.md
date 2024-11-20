@@ -24,3 +24,10 @@ A simple Tic-Tac-Toe game with an unbeatable AI using the **Minimax algorithm**.
 Clone this repository:
 ```bash
 git clone https://github.com/your-username/tic-tac-toe-ai.git
+```
+## Screenshots
+-![Screenshot 2024-11-20 125143](https://github.com/user-attachments/assets/37b39048-fe75-42fd-87c3-8c0c417f858d)
+- ![Screenshot 2024-11-20 125200](https://github.com/user-attachments/assets/43b4c8d4-01ca-429a-b832-d850bd364342)
+- ![Screenshot 2024-11-20 125236](https://github.com/user-attachments/assets/a62a062e-1161-4f38-a3dd-fba2a558cc39)
+ 
+
