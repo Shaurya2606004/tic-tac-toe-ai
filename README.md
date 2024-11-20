@@ -27,3 +27,13 @@ To install Tkinter, if not already installed:
 
 ```bash
 pip install tk
+```
+## Screenshots
+- ![Screenshot 2024-11-20 104317](https://github.com/user-attachments/assets/33633e75-7556-4f27-9993-487fbad6e6ae)
+- ![Screenshot 2024-11-20 104330](https://github.com/user-attachments/assets/b1e2a7b3-e6a9-47a1-a1e7-701b423a66f2)
+- ![Screenshot 2024-11-20 104338](https://github.com/user-attachments/assets/b1a5fa49-0004-494e-a000-8aa86a78ea6c)
+- ![Screenshot 2024-11-20 104349](https://github.com/user-attachments/assets/0987e144-b402-4ab3-a994-7866ffa80a63)
+
+
+
+
